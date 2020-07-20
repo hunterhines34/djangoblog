@@ -13,37 +13,12 @@
         repository.
       </p>
     </div>
+    {% for post in posts %}
     <div>
-      <h2>Testing Post #1</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula,
-        nibh ut congue aliquam, sem lacus pulvinar felis, at pharetra eros nisi
-        tristique risus. Nullam scelerisque metus felis, non dapibus enim
-        pellentesque eget. Integer a dapibus nibh, sit amet sollicitudin mauris.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Cras at tempus mauris. Integer sit amet mi ligula.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Ut ut erat a arcu tincidunt laoreet a vitae nisi.
-        Proin vitae leo eget nibh auctor aliquet. Sed molestie efficitur
-        aliquet.
-      </p>
-      <p>Published by Admin on July 20, 2020 at 7:15 PM</p>
+      <p>Published: {{ post.published_date }}</p>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
-    <div>
-      <h2>Testing Post #2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula,
-        nibh ut congue aliquam, sem lacus pulvinar felis, at pharetra eros nisi
-        tristique risus. Nullam scelerisque metus felis, non dapibus enim
-        pellentesque eget. Integer a dapibus nibh, sit amet sollicitudin mauris.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Cras at tempus mauris. Integer sit amet mi ligula.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Ut ut erat a arcu tincidunt laoreet a vitae nisi.
-        Proin vitae leo eget nibh auctor aliquet. Sed molestie efficitur
-        aliquet.
-      </p>
-      <p>Published by Hunter on July 20, 2020 at 7:15 PM</p>
-    </div>
+    {% endfor %}
   </body>
 </html>
